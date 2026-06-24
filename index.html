@@ -194,6 +194,14 @@ hr.divider{border:none;border-top:0.5px solid #DDD;margin:48px 0;}
   .tab-nav-inner{display:flex;align-items:center;}
   .active-label{display:block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;padding:0 18px;flex:1;}
 }
+
+/* MOBILE GRID FIX */
+@media(max-width:600px){
+  .estrutura-grid{grid-template-columns:1fr !important;}
+  div[style*="grid-template-columns:repeat(3"],div[style*="grid-template-columns: repeat(3"]{grid-template-columns:1fr !important;}
+  .two-col{grid-template-columns:1fr !important;}
+  .page{padding:40px 16px 60px;}
+}
 </style>
 </head>
 <body>
@@ -214,8 +222,8 @@ hr.divider{border:none;border-top:0.5px solid #DDD;margin:48px 0;}
     <button class="tab-btn active" onclick="switchTab('etapas',this)">Etapas da Venda</button>
     <button class="tab-btn" onclick="switchTab('recepcao',this)">Recepção</button>
     <button class="tab-btn" onclick="switchTab('medica',this)">Conduta Médica</button>
-    <button class="tab-btn" onclick="switchTab('comercial',this)">Comercial</button>
-	<button class="tab-btn" onclick="switchTab('enfermagem',this)">Enfermagem</button>    
+	<button class="tab-btn" onclick="switchTab('comercial',this)">Comercial</button>
+    <button class="tab-btn" onclick="switchTab('enfermagem',this)">Enfermagem</button>    
     <button class="ham-btn" id="ham-btn" aria-label="Menu" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
